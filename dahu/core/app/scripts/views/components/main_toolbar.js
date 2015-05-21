@@ -50,7 +50,7 @@ define([
         },
 
         startPreview: function() {
-            events.trigger('app:previewScreencast');
+            events.trigger('app:onPreview');
         },
 
         openPropertyPane: function() {
