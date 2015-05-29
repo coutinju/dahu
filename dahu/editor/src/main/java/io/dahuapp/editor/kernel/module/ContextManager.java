@@ -42,7 +42,7 @@ public class ContextManager implements Module {
      * This will be called after a presentation has been opened.
      */
     public void setDisableScreencastMenus(boolean val) {
-        // this.primaryStage.getScene().lookup("#"+DahuApp.CAPTURE_MENU_ID).setDisable(val);
-        // this.primaryStage.getScene().lookup("#"+DahuApp.GENERATION_MENU_ID).setDisable(val);
+        this.primaryStage.getScene().lookup("#"+DahuApp.CAPTURE_MENU_ID).setDisable(val);
+        this.primaryStage.getScene().lookup("#"+DahuApp.GENERATION_MENU_ID).setDisable(val);
     }
 }
