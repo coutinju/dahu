@@ -1,5 +1,21 @@
+{{#unless toggle}}
+
 <ul>
 	<li><strong>{{type}}</strong></li>
 	<li>Target : {{target}}</li>
 	<li>Trigger : {{trigger}}</li>
 </ul>
+
+{{else}}
+
+<strong>{{type}}</strong> <br>
+Target : <select id="targetChoice">
+	{{!-- #each objects--}}
+	<!-- <option value="{{id}}">{{type}}</option> -->
+	{{!--\each--}}
+</select> <br>
+Trigger : <select id="triggerChoice">
+<option value="click">Click</option>
+</select> <br>
+
+{{/unless}}

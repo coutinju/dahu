@@ -18,6 +18,15 @@ define([
      * Generic action view
      */
     return Marionette.ItemView.extend({
-        template: Handlebars.default.compile(actionTemplate)
+        template: Handlebars.default.compile(actionTemplate),
+
+        events:{
+            "click": "switchToggle"
+        },
+
+        switchToggle: function () {
+            kernel.console.log("Clicked !");
+        }
     });
+
 });
