@@ -139,7 +139,13 @@ define([
             }));
 
             this._registerToScreenEditorEvents();
+            //ajout
+            /*this.workspaceLayout.actionsEditor.show(new WorkspaceActionsView({
+                screencast: this.screencast,
+                screenId: screenId
+            }));*/
 
+            //
             this.workspaceLayout.actionsEditor.show(new ActionsView({
                 screencast: this.screencast,
                 screenId: screenId

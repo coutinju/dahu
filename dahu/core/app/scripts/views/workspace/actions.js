@@ -40,6 +40,8 @@ define([
         template: Handlebars.default.compile(actionsTemplate),
 
         className: "ActionsList",
+        
+        childViewContainer : ".listActions",
 
         initialize : function (options) {
             // mandatory arguments
@@ -60,6 +62,14 @@ define([
                     this.collection.on('change', this.onChanged(), this);
                 }
             }*/
+        },
+
+        events: {
+          'click .buttonAdd': 'clickedButton'
+        },
+
+        clickedButton: function() {
+          this.collection.add(new AppearView());
         },
 
         getChildView: function(item){
