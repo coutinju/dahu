@@ -69,7 +69,7 @@ define([
         },
 
         clickedButton: function() {
-          this.collection.add(new AppearView());
+            this.collection.add(new AppearModel());
         },
 
         getChildView: function(item){
