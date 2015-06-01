@@ -15,7 +15,9 @@ define([
     'views/workspace/actions/move',
     'views/workspace/actions/action',
     // templates
-    'text!templates/views/workspace/actions.html'
+    'text!templates/views/workspace/actions.html',
+    // behaviors
+    'behaviors/workspace/actions/sortable'
 ], function(
     Handlebars,
     Marionette,
@@ -29,7 +31,9 @@ define([
     MoveView,
     ActionView,
     // templates
-    actionsTemplate
+    actionsTemplate,
+    // behaviors
+    SortableBehavior
 ) {
 
     /**
@@ -82,6 +86,12 @@ define([
 
         modelEvents: {
             'change': 'onChanged'
+        },
+
+        behaviors: {
+            SortableBehavior: {
+                behaviorClass: SortableBehavior
+            }
         }
     });
 });
